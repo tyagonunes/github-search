@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 import axios from 'axios';
 
+import './GoogleMap.css';
+
 class GoogleMap extends Component {
 
 	state = {
@@ -10,7 +12,6 @@ class GoogleMap extends Component {
 	}
 
 	componentDidMount() {
-		console.log(this.props.userLocation)
 		this.getLocationCoords(this.props.userLocation)
 	}
 
@@ -32,7 +33,7 @@ class GoogleMap extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className="map-container">
 				{this.state.lat !== null ? (
 					<Map
 						google={this.props.google}
@@ -57,7 +58,7 @@ export default GoogleApiWrapper({
 
 const mapStyles = {
 	width: '100%',
-	height: '400px',
+	height: '100%',
 };
 
 

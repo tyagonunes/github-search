@@ -1,0 +1,27 @@
+.starreds-container h2 {
+    font-size: 18px;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+    color: #666666;
+    font-weight: normal;
+}
+
+
+.starreds-container ul li {
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.starreds-container ul li a {
+    color: #0366d6;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.starreds-container ul li div {
+    padding: 5px 0;
+
+}
+.starreds-container ul li small {
+    color: #586069;
+}

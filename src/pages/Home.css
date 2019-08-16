@@ -1,22 +1,39 @@
 .main-container {
-    max-width: 980px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 50px 0;
-    text-align: center;
+    display: flex;
 }
 
 
 .main-container .container-profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+   flex: 1;
+   padding: 0 20px;
 }
 
 
-.main-container .container-profile img {
-    max-width: 200px;
-    border-radius: 5px 5px 0 0;
+.main-container .container-actions {
+    flex: 3;
+    padding: 0 20px;
+ }
+
+
+.main-container .container-profile figure img {
+    width: 100%;
+    margin: auto;
+    float: none;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
+.main-container .container-profile .profile-details ul li {
+    margin-bottom: 10px;
+}
+
+.main-container .container-profile .profile-details ul li .profile-nickname {
+    font-size: 20px;
+    color: #666666;
+}
 
 
