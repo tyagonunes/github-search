@@ -1,0 +1,22 @@
+.main-container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+}
+
+
+.main-container .container-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.main-container .container-profile img {
+    max-width: 200px;
+    border-radius: 5px 5px 0 0;
+}
+
+
+
