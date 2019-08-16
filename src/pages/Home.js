@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import GoogleMap from '../components/GoogleMap'; 
 import './Home.css';
 
 export default class Home extends Component {
@@ -7,7 +8,9 @@ export default class Home extends Component {
 	constructor(props) {
 		super(props)
 
-		this.state = { user: this.props.location.state.user }
+		this.state = { 
+			user: this.props.location.state.user,
+		}
 
 		console.log(this.state.user)
 	}
@@ -26,6 +29,7 @@ export default class Home extends Component {
 						<a href={this.state.user.html_url} target="blank">{this.state.user.html_url}</a>
 					</footer>
 				</section>
+				<GoogleMap userLocation={this.state.user.location} />
 			</div>
 		);
 	}
