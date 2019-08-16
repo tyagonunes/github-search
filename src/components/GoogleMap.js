@@ -43,7 +43,7 @@ class GoogleMap extends Component {
 						<Marker position={{ lat: this.state.lat, lng: this.state.lng }} />
 					</Map>
 				) : (
-					<div>Vazio</div>
+					<div></div>
 				)}
 			</div>
 

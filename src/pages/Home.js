@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import GoogleMap from '../components/GoogleMap'; 
+import GoogleMap from '../components/GoogleMap';
+import Starreds from '../components/Starreds';
 import './Home.css';
 
 export default class Home extends Component {
@@ -8,12 +9,11 @@ export default class Home extends Component {
 	constructor(props) {
 		super(props)
 
-		this.state = { 
+		this.state = {
 			user: this.props.location.state.user,
 		}
-
-		console.log(this.state.user)
 	}
+
 
 
 	render() {
@@ -23,13 +23,18 @@ export default class Home extends Component {
 				<section className="container-profile">
 					<img src={this.state.user.avatar_url} alt="" />
 					<footer>
-						<strong>{this.state.user.name}</strong>
+						<strong>{this.state.user.login}</strong>
 						<p>{this.state.user.bio}</p>
 						<p>{this.state.user.email}</p>
-						<a href={this.state.user.html_url} target="blank">{this.state.user.html_url}</a>
+						<a href={this.state.user.html_url} target="blank">Link Github</a>
 					</footer>
 				</section>
-				<GoogleMap userLocation={this.state.user.location} />
+				<section>
+					<GoogleMap userLocation={this.state.user.location} />
+				</section>
+				<section>
+					<Starreds userLogin={this.state.user.login} />
+				</section>
 			</div>
 		);
 	}
