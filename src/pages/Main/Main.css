@@ -43,16 +43,13 @@
     color: #666666;
 }
 
+.main-container .container-profile .profile-details ul li svg {
+    margin-bottom: -2px;
+    margin-right: 5px;
+}
+
 .main-container .container-profile .profile-details ul li a {
     color:#0366d6
-}
-
-.main-container .container-profile .profile-details ul li span {
-    margin-left: 5px;
-}
-
-.main-container .container-profile .profile-details ul li a {
-    margin-left: 5px;
 }
 
 .main-container .container-profile .profile-logout {

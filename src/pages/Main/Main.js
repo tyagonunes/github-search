@@ -24,7 +24,7 @@ export default class Main extends Component {
 						<ul>
 							<li>{user.bio}</li>
 							<li><FaUser /><span className="profile-nickname">{user.login}</span></li>
-							{user.email && <li><FaEnvelope /> <span className="profile-email">{user.email}</span></li>}
+							{user.email && <li><FaEnvelope /><span className="profile-email">{user.email}</span></li>}
 							<li><FaGithub /><a className="profile-link" href={user.html_url} target="blank">{user.html_url}</a></li>
 							<li><FaMapMarkerAlt /><span className="profile-location">{user.location}</span></li>
 						</ul>
