@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import api from '../../services/api';
+import api, {dataAuth} from '../../services/api';
 import ReactLoading from 'react-loading';
 import { FaGithub } from 'react-icons/fa';
 import './Login.css';
@@ -25,10 +25,10 @@ export default class Login extends Component {
 
         this.setState({ loading: true })
 
-        api.get(`/users/${this.state.userName}`)
+        api.get(`/users/${this.state.userName}?client_id=${dataAuth.client_id}&client_secret=${dataAuth.client_secret}`)
             .then(res => {
                 this.setState({ loading: false });
-                
+                console.log(res)
                 this.props.history.push('/main', { 'user': res.data });
             })
             .catch(err => {
