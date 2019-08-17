@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
-
+import ReactLoading from 'react-loading';
 import './Login.css';
 
 
@@ -31,7 +31,7 @@ export default class Login extends Component {
             .catch(err => {
                 (err.response.status === 404) ?
                     this.setState({ error: 'Usuário não encontrado' }) :
-                    this.setState({ error: 'Falha ao obter os dados' })
+                    this.setState({ error: 'Falha ao obter os dados do usuário' })
             })
             .finally(() => {
                 this.setState({ loading: false });
@@ -52,8 +52,8 @@ export default class Login extends Component {
                         value={this.state.userName}
                         onChange={this.handleChange} />
 
-                    <button type="submit" disabled={loading || !userName}>
-                        {loading && <span className="loading">Buscando</span>}
+                    <button type="submit" className="btn-primary" disabled={loading || !userName}>
+                        {loading && <span>Buscando <ReactLoading type={'bubbles'} color={'#fff'} height={30} width={30} /> </span>}
                         {!loading && <span>Buscar</span>}
                     </button>
 
