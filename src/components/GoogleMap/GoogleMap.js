@@ -11,13 +11,10 @@ class GoogleMap extends Component {
 		lng: null
 	}
 
-	componentDidMount() {
-		this.getLocationCoords(this.props.userLocation)
-	}
+	UNSAFE_componentWillMount() {
+		const { userLocation } = this.props
 
-	getLocationCoords = async (local) => {
-
-		let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${local}&key=AIzaSyBVX147diKT9VWLIt-aqNveo7TzuC3Qsv8`
+		let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${userLocation}&key=AIzaSyBVX147diKT9VWLIt-aqNveo7TzuC3Qsv8`
 		const formatURL = url.replace(' ', '%20')
 
 		axios.get(formatURL)
@@ -31,10 +28,11 @@ class GoogleMap extends Component {
 			})
 	}
 
+
 	render() {
 		return (
 			<div className="map-container">
-				{this.state.lat !== null ? (
+				{this.state.lat !== null && this.state.lng !== null  ? (
 					<Map
 						google={this.props.google}
 						zoom={8}
@@ -44,8 +42,8 @@ class GoogleMap extends Component {
 						<Marker position={{ lat: this.state.lat, lng: this.state.lng }} />
 					</Map>
 				) : (
-					<div></div>
-				)}
+						<div></div>
+					)}
 			</div>
 
 		);
