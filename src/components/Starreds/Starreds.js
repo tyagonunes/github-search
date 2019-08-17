@@ -26,7 +26,7 @@ export default class Starreds extends Component {
         const { loadingStarreds, starreds, error } = this.state;
 
         return (
-            <div className="starreds-container">
+            <div className="starreds-container show-slow">
                 <h2>Repositórios salvos como estrela</h2>
 
                 {loadingStarreds ? (

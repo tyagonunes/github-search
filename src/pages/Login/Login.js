@@ -45,7 +45,7 @@ export default class Login extends Component {
         const { loading, error, userName } = this.state
 
         return (
-            <div className="login-container">
+            <div className="login-container show-slow">
                 <form onSubmit={this.handleSubmit}>
                     <span className="logo"><FaGithub /> Github Search</span>
                     <span className="slogan">Encontre informações básicas de usuários do Github</span>
@@ -59,7 +59,7 @@ export default class Login extends Component {
                         {!loading && <span>Buscar</span>}
                     </button>
 
-                    {error && <span className="login-error">{error}</span>}
+                    {error && <span className="login-error show-slow">{error}</span>}
                 </form>
             </div>
         );

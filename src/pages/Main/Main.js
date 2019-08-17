@@ -14,7 +14,7 @@ export default class Main extends Component {
 		return (
 			<div className="main-container">
 
-				<section className="container-profile">
+				<section className="container-profile show-slow">
 
 					<figure>
 						<img src={user.avatar_url} alt="avatar" />

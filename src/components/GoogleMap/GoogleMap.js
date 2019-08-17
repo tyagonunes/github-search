@@ -31,7 +31,7 @@ class GoogleMap extends Component {
 
 	render() {
 		return (
-			<div className="map-container">
+			<div className="map-container show-slow">
 				{this.state.lat !== null && this.state.lng !== null  ? (
 					<Map
 						google={this.props.google}
