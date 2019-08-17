@@ -4,34 +4,26 @@ import ReactLoading from 'react-loading';
 import './Starreds.css';
 
 export default class Starreds extends Component {
-   
+
     state = {
         starreds: [],
-        loadingStarreds: false
+        loadingStarreds: false,
+        error: ''
     }
 
     componentDidMount() {
-        this.getStarredRepos(this.props.userLogin)
-    }
+        const { userLogin } = this.props
 
-    getStarredRepos = (userLogin) => {
         this.setState({ loadingStarreds: true })
 
         api.get(`/users/${userLogin}/starred`)
-            .then(res => {
-                this.setState({ starreds: res.data })
-            })
-            .catch(err => {
-
-            })
-            .finally(() => {
-                this.setState({ loadingStarreds: false })
-            })
+            .then(res => this.setState({ starreds: res.data, loadingStarreds: false }))
+            .catch(() => this.setState({ error: 'Falha em obter os dados do usuário', loadingStarreds: false }))
     }
 
 
     render() {
-        const { loadingStarreds, starreds } = this.state;
+        const { loadingStarreds, starreds, error } = this.state;
 
         return (
             <div className="starreds-container">
@@ -53,8 +45,10 @@ export default class Starreds extends Component {
                                     ))}
                                 </ul>
                             ) : (
-                                    <div className="starreds-empty">Não há repositórios salvos como estrela para esse usuário.</div>
+                                    <div className="starreds-message">Não há repositórios salvos como estrela para esse usuário.</div>
                                 )}
+
+                            { error && <div className="starreds-message">{error}</div>}
                         </div>
                     )}
             </div>
