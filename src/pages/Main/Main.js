@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { FaUser, FaMapMarkerAlt, FaGithub, FaEnvelope } from 'react-icons/fa';
 
-import Starreds from '../../components/Starreds';
-import GoogleMap from '../../components/GoogleMap';
+import Starreds from '../../components/Starreds/Starreds';
+import GoogleMap from '../../components/GoogleMap/GoogleMap';
 import './Main.css';
 
 export default class Main extends Component {
