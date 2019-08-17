@@ -44,13 +44,16 @@
     cursor: pointer;
 }
 
-.login-container form button:disabled {
-    opacity: 0.5;
-}
 
 .login-container form .login-error {
     color: red;
     font-size: 12px;
     margin-top: 10px;
     text-align: center;
+}
+
+.login-container form button span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
