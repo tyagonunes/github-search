@@ -1,14 +1,14 @@
 import React from 'react';
 import {Switch, Route } from 'react-router-dom';
 
-import Home from './pages/Home';
-import Search from './pages/Search';
+import Main from './pages/Main/Main';
+import Login from './pages/Login/Login';
 
 function Routes() {
     return (
         <Switch>
-            <Route path='/' exact component={Search}/>
-            <Route path='/home' component={Home}/>
+            <Route path='/' exact component={Login}/>
+            <Route path='/main' component={Main}/>
         </Switch>
     );
 }
