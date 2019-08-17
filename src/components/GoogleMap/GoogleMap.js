@@ -11,7 +11,7 @@ class GoogleMap extends Component {
 		lng: null
 	}
 
-	UNSAFE_componentWillMount() {
+	componentDidMount() {
 		const { userLocation } = this.props
 
 		let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${userLocation}&key=AIzaSyBVX147diKT9VWLIt-aqNveo7TzuC3Qsv8`

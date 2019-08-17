@@ -11,7 +11,7 @@ export default class Starreds extends Component {
         error: ''
     }
 
-    UNSAFE_componentWillMount() {
+    componentDidMount() {
         const { userLogin } = this.props
 
         this.setState({ loadingStarreds: true })

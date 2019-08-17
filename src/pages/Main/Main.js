@@ -32,7 +32,7 @@ export default class Main extends Component {
 					</div>
 					<div className="profile-logout">
 						<Link to="/" className="btn-primary"> 
-							Sair
+							Pesquisar outro
 						</Link>
 					</div>
 				</section>
