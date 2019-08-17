@@ -7,14 +7,14 @@
 
 .main-container .container-profile {
     flex: 1;
-    padding: 0 20px;
-    
+    padding: 0 30px;
+    border-right: 1px solid #ccc;
 }
 
 
-.main-container .container-actions {
+.main-container .container-starreds {
     flex: 3;
-    padding: 0 20px;
+    padding: 0 30px;
 }
 
 
@@ -63,7 +63,7 @@
 }
 
 @media (max-width:992px) { 
-    .main-container .container-actions {
+    .main-container .container-starreds {
         flex: 2;
     }
 }
