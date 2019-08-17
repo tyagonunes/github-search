@@ -5,8 +5,6 @@
     display: flex;
 }
 
-
-
 .main-container .container-profile {
    flex: 1;
    padding: 0 20px;
@@ -38,6 +36,15 @@
     color: #666666;
 }
 
+.main-container .container-profile .profile-logout {
+    margin-top: 30px;
+    text-align: center;    
+}
+
+.main-container .container-profile .profile-logout .btn-primary {
+    text-decoration: none;
+    padding:10px 20px;
+}
 
 @media (max-width:768px) {
     .main-container {
@@ -49,3 +56,5 @@
         text-align: center;
     }
 }
+
+

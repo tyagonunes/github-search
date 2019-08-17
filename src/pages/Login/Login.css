@@ -32,18 +32,6 @@
     color: #999;
 }
 
-.login-container form button {
-    margin-top: 10px;
-    border: 0;
-    border-radius: 4px;
-    font-size: 16px;
-    background: #32C955;
-    font-weight: bold;
-    color: #fff;
-    height: 48px;
-    cursor: pointer;
-}
-
 
 .login-container form .login-error {
     color: red;
