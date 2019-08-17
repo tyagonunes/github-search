@@ -6,28 +6,35 @@
     flex-direction: column;
 }
 
-.login-container form {
-    width: 100%;
+.login-container .login-labels {
     max-width: 300px;
     display: flex;
     flex-direction: column;
 }
 
-.login-container form .logo {
+.login-container .login-labels .logo {
     text-align: center;
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 10px;
 }
 
-.login-container form .slogan {
+.login-container .login-labels .slogan {
     text-align: center;
     margin-bottom: 10px;
+    font-size: 12px;
 }
 
-.login-container form .logo svg {
+.login-container .login-labels .logo svg {
     margin-bottom: -2px;
     margin-right: 4px;
+}
+
+.login-container form {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
 }
 
 .login-container form input {
@@ -47,6 +54,7 @@
 .login-container form .login-error {
     color: red;
     font-size: 12px;
+    font-weight: bold;
     margin-top: 10px;
     text-align: center;
 }

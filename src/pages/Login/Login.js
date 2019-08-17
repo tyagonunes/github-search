@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import api, {dataAuth} from '../../services/api';
+import api, { dataAuth } from '../../services/api';
 import ReactLoading from 'react-loading';
 import { FaGithub } from 'react-icons/fa';
 import './Login.css';
@@ -28,7 +28,6 @@ export default class Login extends Component {
         api.get(`/users/${this.state.userName}?client_id=${dataAuth.client_id}&client_secret=${dataAuth.client_secret}`)
             .then(res => {
                 this.setState({ loading: false });
-                console.log(res)
                 this.props.history.push('/main', { 'user': res.data });
             })
             .catch(err => {
@@ -46,9 +45,11 @@ export default class Login extends Component {
 
         return (
             <div className="login-container show-slow">
-                <form onSubmit={this.handleSubmit}>
+                <div className="login-labels">
                     <span className="logo"><FaGithub /> Github Search</span>
-                    <span className="slogan">Encontre informações básicas de usuários do Github</span>
+                    <span className="slogan">Serviço de busca de informações de usuários do Github</span>
+                </div>
+                <form onSubmit={this.handleSubmit}>
                     <input type="text"
                         placeholder="Digite um nome ou apelido de usuário"
                         value={this.state.userName}
