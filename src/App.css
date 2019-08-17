@@ -45,3 +45,18 @@ a {
   opacity: 0.5;
   cursor: auto;
 }
+
+
+.show-slow {
+  animation-name: slowIn;
+  animation-duration: 0.5s;
+}
+
+@keyframes slowIn {
+  from {
+      opacity: 0
+  }
+  to {
+      opacity: 1
+  }
+}
