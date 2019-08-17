@@ -47,6 +47,13 @@
     color:#0366d6
 }
 
+.main-container .container-profile .profile-details ul li span {
+    margin-left: 5px;
+}
+
+.main-container .container-profile .profile-details ul li a {
+    margin-left: 5px;
+}
 
 .main-container .container-profile .profile-logout {
     margin-top: 30px;
