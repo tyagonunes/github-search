@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
 import ReactLoading from 'react-loading';
+import { FaGithub } from 'react-icons/fa';
 import './Login.css';
 
 
@@ -46,9 +47,10 @@ export default class Login extends Component {
         return (
             <div className="login-container">
                 <form onSubmit={this.handleSubmit}>
-                    <span className="logo">Github Search</span>
+                    <span className="logo"><FaGithub /> Github Search</span>
+                    <span className="slogan">Encontre informações básicas de usuários do Github</span>
                     <input type="text"
-                        placeholder="Digite o usuário do github"
+                        placeholder="Digite um nome ou apelido de usuário"
                         value={this.state.userName}
                         onChange={this.handleChange} />
 
