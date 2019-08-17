@@ -6,6 +6,7 @@
 }
 
 
+
 .main-container .container-profile {
    flex: 1;
    padding: 0 20px;
@@ -20,6 +21,7 @@
 
 .main-container .container-profile figure img {
     width: 100%;
+    max-width: 300px;
     margin: auto;
     float: none;
     display: block;
@@ -28,7 +30,7 @@
 }
 
 .main-container .container-profile .profile-details ul li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .main-container .container-profile .profile-details ul li .profile-nickname {
@@ -37,3 +39,13 @@
 }
 
 
+@media (max-width:768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .main-container .container-profile {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}

@@ -12,8 +12,14 @@
     flex-direction: column;
 }
 
+.login-container form .logo {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
 .login-container form input {
-    margin-top: 20px;
+    margin-top: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     height: 48px;
@@ -36,4 +42,15 @@
     color: #fff;
     height: 48px;
     cursor: pointer;
+}
+
+.login-container form button:disabled {
+    opacity: 0.5;
+}
+
+.login-container form .login-error {
+    color: red;
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: center;
 }
