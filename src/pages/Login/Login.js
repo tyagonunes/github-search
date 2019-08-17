@@ -55,7 +55,7 @@ export default class Login extends Component {
                         value={this.state.userName}
                         onChange={this.handleChange} />
 
-                    <button type="submit" className="btn-primary" disabled={loading || !userName}>
+                    <button type="submit" className="btn btn-primary" disabled={loading || !userName}>
                         {loading && <span>Buscando <ReactLoading type={'bubbles'} color={'#fff'} height={30} width={30} /> </span>}
                         {!loading && <span>Buscar</span>}
                     </button>

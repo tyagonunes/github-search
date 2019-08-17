@@ -1,14 +1,5 @@
-    
-* {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  box-sizing: border-box;
-}
-
 html, body, #root {
   height: 100%;
-  
 }
 
 body {
@@ -21,6 +12,17 @@ body, input, button {
   font-family: 'Montserrat', sans-serif;
 }
 
+
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+
 ul {
   list-style: none;
 }
@@ -29,16 +31,21 @@ a {
   text-decoration: none;
 }
 
-.btn-primary {
-  margin-top: 10px;
+
+/* Buttons */
+
+.btn {
   border: 0;
   border-radius: 4px;
   font-size: 16px;
-  background: #32C955;
   font-weight: bold;
-  color: #fff;
   height: 48px;
   cursor: pointer;
+}
+
+.btn-primary {
+  background: #32C955;
+  color: #fff;
 }
 
 button:disabled {
@@ -46,6 +53,9 @@ button:disabled {
   cursor: auto;
 }
 
+
+
+/* Fade anumations */
 
 .show-slow {
   animation-name: slowIn;
