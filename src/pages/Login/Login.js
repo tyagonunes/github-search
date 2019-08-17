@@ -26,17 +26,17 @@ export default class Login extends Component {
 
         api.get(`/users/${this.state.userName}`)
             .then(res => {
+                this.setState({ loading: false });
+                
                 this.props.history.push('/main', { 'user': res.data });
             })
             .catch(err => {
+                this.setState({ loading: false });
+
                 (err.response.status === 404) ?
                     this.setState({ error: 'Usuário não encontrado' }) :
                     this.setState({ error: 'Falha ao obter os dados do usuário' })
             })
-            .finally(() => {
-                this.setState({ loading: false });
-            })
-
     }
 
 
