@@ -25,3 +25,13 @@
 .starreds-container ul li small {
     color: #586069;
 }
+
+.starreds-container .starreds-empty {
+    padding: 20px 0;
+}
+
+.starreds-container .starreds-loading {
+    display: flex;
+    justify-content: center; 
+    padding-top: 20px;
+} 
