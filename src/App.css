@@ -23,7 +23,9 @@ ul {
   list-style: none;
 }
 
-
+a {
+  text-decoration: none;
+}
 
 .btn-primary {
   margin-top: 10px;
@@ -39,4 +41,5 @@ ul {
 
 .btn-primary:disabled {
   opacity: 0.5;
+  cursor: auto;
 }

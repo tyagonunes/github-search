@@ -6,15 +6,16 @@
 }
 
 .main-container .container-profile {
-   flex: 1;
-   padding: 0 20px;
+    flex: 1;
+    padding: 0 20px;
+    
 }
 
 
 .main-container .container-actions {
     flex: 3;
     padding: 0 20px;
- }
+}
 
 
 .main-container .container-profile figure img {
@@ -23,27 +24,44 @@
     margin: auto;
     float: none;
     display: block;
+
     border-radius: 5px;
-    margin-bottom: 10px;
+    -webkit-box-border-radius: 5px;
+    -moz-box-border-radius: 5px;
+
+    box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.main-container .container-profile .profile-details ul {
+    margin:  35px 0;
 }
 
 .main-container .container-profile .profile-details ul li {
     margin-bottom: 15px;
-}
-
-.main-container .container-profile .profile-details ul li .profile-nickname {
-    font-size: 20px;
     color: #666666;
 }
 
+.main-container .container-profile .profile-details ul li a {
+    color:#0366d6
+}
+
+
 .main-container .container-profile .profile-logout {
     margin-top: 30px;
-    text-align: center;    
+    text-align: center;
 }
 
 .main-container .container-profile .profile-logout .btn-primary {
     text-decoration: none;
-    padding:10px 20px;
+    padding: 10px 20px;
+}
+
+@media (max-width:992px) { 
+    .main-container .container-actions {
+        flex: 2;
+    }
 }
 
 @media (max-width:768px) {
@@ -56,5 +74,3 @@
         text-align: center;
     }
 }
-
-

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { FaUser, FaMapMarkerAlt, FaGithub } from 'react-icons/fa';
 
 import Starreds from '../../components/Starreds';
 import GoogleMap from '../../components/GoogleMap';
@@ -26,16 +27,17 @@ export default class Main extends Component {
 
 					<div className="profile-details">
 						<ul>
-							<li><span className="profile-nickname">{user.login}</span></li>
 							<li><span className="profile-bio">{user.bio}</span></li>
+							<li><FaUser />  <span className="profile-nickname">{user.login}</span></li>
 							<li><span className="profile-email">{user.email}</span></li>
-							<li><a className="profile-link" href={user.html_url} target="blank">{user.html_url}</a></li>
+							<li><FaGithub /> <a className="profile-link" href={user.html_url} target="blank">{user.html_url}</a></li>
+							<li><FaMapMarkerAlt />  <span className="profile-location">{user.location}</span></li>
 						</ul>
 						<GoogleMap userLocation={user.location} />
 					</div>
 					<div className="profile-logout">
 						<Link to="/" className="btn-primary"> 
-								Sair
+							Sair
 						</Link>
 					</div>
 				</section>

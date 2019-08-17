@@ -4,6 +4,7 @@ import ReactLoading from 'react-loading';
 import './Starreds.css';
 
 export default class Starreds extends Component {
+   
     state = {
         starreds: [],
         loadingStarreds: false
@@ -35,7 +36,6 @@ export default class Starreds extends Component {
         return (
             <div className="starreds-container">
                 <h2>Repositórios salvos como estrela</h2>
-
 
                 {loadingStarreds ? (
                     <div className="starreds-loading">
