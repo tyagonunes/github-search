@@ -17,7 +17,7 @@ class GoogleMap extends Component {
 
 	getLocationCoords = async (local) => {
 
-		let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${local}&key=AIzaSyD5WewkaZ8aMW-0FtYw0mCVIRpemF-iu1A`
+		let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${local}&key=AIzaSyBVX147diKT9VWLIt-aqNveo7TzuC3Qsv8`
 		const formatURL = url.replace(' ', '%20')
 
 		axios.get(formatURL)
