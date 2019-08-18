@@ -1,24 +1,41 @@
-.main-container {
+.main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 20px 0;
+}
+
+.main .main-back {
+    padding: 30px;
+}
+
+.main .main-back .back-link {
+    color: #0366d6;
+    font-weight: bold;
+}
+
+.main .main-back .back-link svg {
+    margin-bottom: -1px;
+    margin-right: 5px;
+}
+
+.main .main-container {
     display: flex;
 }
 
-.main-container .container-profile {
+.main  .main-container .container-profile {
     flex: 1;
     padding: 0 30px;
     border-right: 1px solid #ccc;
 }
 
 
-.main-container .container-starreds {
+.main  .main-container .container-starreds {
     flex: 3;
     padding: 0 30px;
 }
 
 
-.main-container .container-profile figure img {
+.main  .main-container .container-profile figure img {
     width: 100%;
     max-width: 300px;
     margin: auto;
@@ -34,46 +51,46 @@
     -moz-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-.main-container .container-profile .profile-details ul {
+.main .main-container .container-profile .profile-details ul {
     margin:  35px 0;
 }
 
-.main-container .container-profile .profile-details ul li {
+.main .main-container .container-profile .profile-details ul li {
     margin-bottom: 15px;
     color: #666666;
 }
 
-.main-container .container-profile .profile-details ul li svg {
+.main .main-container .container-profile .profile-details ul li svg {
     margin-bottom: -2px;
     margin-right: 5px;
 }
 
-.main-container .container-profile .profile-details ul li a {
+.main .main-container .container-profile .profile-details ul li a {
     color:#0366d6
 }
 
-.main-container .container-profile .profile-logout {
+.main .main-container .container-profile .profile-logout {
     margin-top: 30px;
     text-align: center;
 }
 
-.main-container .container-profile .profile-logout .btn-primary {
+.main .main-container .container-profile .profile-logout .btn-primary {
     text-decoration: none;
     padding: 10px 20px;
 }
 
 @media (max-width:992px) { 
-    .main-container .container-starreds {
+    .main .main-container .container-starreds {
         flex: 2;
     }
 }
 
 @media (max-width:768px) {
-    .main-container {
+    .main .main-container {
         flex-direction: column;
     }
 
-    .main-container .container-profile {
+    .main .main-container .container-profile {
         margin-bottom: 50px;
         text-align: center;
     }
