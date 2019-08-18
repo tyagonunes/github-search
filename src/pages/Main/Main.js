@@ -9,8 +9,20 @@ import './Main.css';
 
 export default class Main extends Component {
 
+	state = {
+		user: {}
+	}
+
+	componentDidMount() {
+		
+		// Protege a rota main
+		(this.props.location.state && this.props.location.state.user) ?
+			this.setState({ user: this.props.location.state.user }):
+			this.props.history.push('/');
+	}
+
 	render() {
-		const { user } = this.props.location.state;
+		const { user } = this.state;
 
 		return (
 			<div className="main-container">
@@ -32,14 +44,14 @@ export default class Main extends Component {
 						{user.location && <GoogleMap userLocation={user.location} />}
 					</div>
 					<div className="profile-logout">
-						<Link to="/" className="btn btn-primary"> 
+						<Link to="/" className="btn btn-primary">
 							Pesquisar outro
 						</Link>
 					</div>
 				</section>
 
 				<section className="container-starreds">
-					<Starreds userLogin={user.login} />
+					{user.login && <Starreds userLogin={user.login} />}
 				</section>
 			</div>
 		);
