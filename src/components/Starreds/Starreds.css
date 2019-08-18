@@ -34,3 +34,19 @@
     justify-content: center; 
     padding-top: 20px;
 } 
+
+.starreds-container ul li footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.starreds-container ul li footer button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    /* font-weight: normal; */
+    font-size: 12px;
+}
+
+.starreds-container ul li footer button svg {
+    margin-bottom: -2px;
+}
