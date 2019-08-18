@@ -3,6 +3,7 @@ import api, {dataAuth} from '../../services/api';
 import ReactLoading from 'react-loading';
 import { FaStar } from 'react-icons/fa';
 import './Starreds.css';
+import Snackbar from '@material-ui/core/SnackBar';
 
 export default class Starreds extends Component {
 
@@ -11,7 +12,9 @@ export default class Starreds extends Component {
         loadingStarreds: false,
         error: '',
         userLogin: '',
-        passwordLogin: ''
+        passwordLogin: '',
+        snackbaropen: false,
+        snackbarmsg: ''
     }
 
     componentDidMount() {
@@ -20,7 +23,7 @@ export default class Starreds extends Component {
         this.setState({ loadingStarreds: true, userLogin: userLogin })
 
         api.get(`/users/${userLogin}/starred`)
-            .then(res =>{ console.log(res.data); this.setState({ starreds: res.data, loadingStarreds: false })})
+            .then(res =>this.setState({ starreds: res.data, loadingStarreds: false }))
             .catch(() => this.setState({ error: 'Falha em obter os dados do usuário', loadingStarreds: false }))
     }
 
@@ -38,7 +41,7 @@ export default class Starreds extends Component {
                 'authorization': `Basic ${auth}`,
             }
         })
-        .then((res) => { console.log(res)})
+        .then((res) => { this.openSnackbar('Estrela removida com sucesso')})
         .catch((err) => {
             alert('Erro ao remover estrela do repositório. Tente novamente com a senha correta')
             this.setState({passwordLogin: ''})
@@ -59,21 +62,33 @@ export default class Starreds extends Component {
                 'authorization': `Basic ${auth}`,
             }
         })
-        .then((res) => {
-            console.log(res)
-        })
+        .then((res) => { this.openSnackbar('Estrela adicionada com sucesso')})
         .catch((err) => {
-            alert('Erro ao adicionar estrela no repositório. Tente novamente com a senha correta')
+            this.openSnackbar('Erro ao adicionar estrela no repositório. Tente novamente com a senha correta')
             this.setState({passwordLogin: ''})
         })
     }
 
+    openSnackbar = (message) => {
+        this.setState({snackbaropen: true, snackbarmsg: message})
+
+        setTimeout(() => {
+            this.setState({snackbaropen: false})
+        }, 3000)
+    } 
 
     render() {
         const { loadingStarreds, starreds, error } = this.state;
 
         return (
             <div className="starreds-container show-slow">
+                <Snackbar 
+                    anchorOrigin={{vertical:'bottom', horizontal:'center'}}
+                    open = {this.state.snackbaropen}
+                    autoHideDuration = {3000}
+                    message = {<span id="message-id">{this.state.snackbarmsg}</span>}
+                />
+
                 <h2>Repositórios salvos como estrela</h2>
                 {loadingStarreds ? (
                     <div className="starreds-loading">
