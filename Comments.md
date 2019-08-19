@@ -13,6 +13,4 @@ Procurei usar a componentização dividindo as reponsabilidades das funcionalida
 
 2. Tentei fazer um Dialog estilizado com a lib Material-Ui, para pegar o valor da senha do usuário e autentica-lo, mas tive problemas em resolver o callback do Dialog para continuar com o processo de request de dar ou remover estrela. A forma mais rápida foi o prompt nativo do browser. É necessário ajuste futuro.
 
-3. Tive que proteger a rota **main** manualmente para que o usuário nao digite /main e caia no vazio. Uma implementação melhor no meu gosto seria com guardas de rotas, mas não tive tempo de implementa-las.
-
-4. Não entendo porque o email do usuário vem sempre null. Em todos os testes com usuários que eu fiz nenhum retornou o email. Não consegui solucionar esse problema.
+3. Não entendo porque o email do usuário vem sempre null. Em todos os testes com usuários que eu fiz nenhum retornou o email. Não consegui solucionar esse problema.
