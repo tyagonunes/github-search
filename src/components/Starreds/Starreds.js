@@ -3,7 +3,7 @@ import api, { dataAuth } from '../../services/api';
 import ReactLoading from 'react-loading';
 import { FaStar } from 'react-icons/fa';
 import './Starreds.css';
-import Snackbar from '@material-ui/core/SnackBar';
+import Snackbar from '@material-ui/core/Snackbar';
 
 export default class Starreds extends Component {
 
